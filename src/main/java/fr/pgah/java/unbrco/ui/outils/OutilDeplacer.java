@@ -40,7 +40,7 @@ public class OutilDeplacer extends Outil {
     // Ne fait rien si pas de forme à cet endroit.
     formeADeplacer = editeur.getFormeEn(e.getPoint());
     if (formeADeplacer != null) {
-      dragDansZoneDessin(e);
+      debut = e.getPoint();
       formeADeplacer.selectionnerEtJouer();
     }
   }

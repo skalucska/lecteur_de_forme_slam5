@@ -18,6 +18,7 @@ public class LecteurDeForme implements ActionListener {
     this.dessin = dessin;
     this.forme = forme;
     this.t = t;
+    colonneCourante = 0;
 
   }
 

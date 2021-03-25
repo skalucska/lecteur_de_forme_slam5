@@ -36,7 +36,7 @@ public class Forme {
     // À COMPLÉTER
     // renvoyer vrai si le x donné est dans l'espace horizontal de la forme
     // renvoyer faux sinon
-    if (x > this.x && x <= longueur) {
+    if (x >= this.x && x <= this.x + longueur) {
       return true;
     }
     return false;
@@ -48,18 +48,17 @@ public class Forme {
     // À COMPLÉTER
     // renvoyer vrai si le y donné est dans l'espace vertical de la forme
     // renvoyer faux sinon
-    if (y > this.y && y <= hauteur) {
+    if (y >= this.y && y <= this.y + hauteur) {
       return true;
     }
     return false;
   }
 
   public boolean contient(Point pt) {
-
     // À COMPLÉTER
     // renvoyer vrai si le point donné est dans l'espace occupé par la forme
     // renvoyer faux sinon
-    if (contientX(x) && contientY(y)) {
+    if (contientX((int) pt.getX()) && contientY((int) pt.getY())) {
       return true;
     }
     return false;

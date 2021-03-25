@@ -3,6 +3,8 @@ package fr.pgah.java.unbrco.lecteurs;
 import fr.pgah.java.unbrco.model.Dessin;
 import fr.pgah.java.unbrco.model.Forme;
 import fr.pgah.java.unbrco.ui.EditeurDeFormes;
+
+import java.util.ArrayList;
 import java.util.List;
 import javax.swing.Timer;
 import java.awt.event.ActionEvent;
@@ -19,6 +21,9 @@ public class LecteurDeDessin implements ActionListener {
   public LecteurDeDessin(Dessin dessin, Timer timer) {
     this.dessin = dessin;
     this.timer = timer;
+    colonneEnCours = 0;
+    dansLaColonnePrecedente = new ArrayList<>();
+    dansLaColonneCourante = new ArrayList<>();
   }
 
   @Override
@@ -46,17 +51,14 @@ public class LecteurDeDessin implements ActionListener {
   }
 
   private void selectionnerEtJouerLesFormes() {
-    dansLaColonneCourante = dessin.formesSurLaColonne(colonneEnCours);
-
     // À COMPLÉTER
-
+    dansLaColonneCourante = dessin.formesSurLaColonne(colonneEnCours);
     // Déselectionner et stopper toutes les formes qui étaient dans
     // la colonne précédente et qui ne sont plus dans la colonne courante
     for (Forme precedente : dansLaColonnePrecedente) {
       if (!dansLaColonneCourante.contains(precedente)) {
         precedente.deselectionnerEtStopper();
       }
-
     }
 
     // Sélectionner et jouer toutes les formes qui sont dans
@@ -67,6 +69,5 @@ public class LecteurDeDessin implements ActionListener {
       }
 
     }
-
   }
 }
