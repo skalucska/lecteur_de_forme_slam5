@@ -2,7 +2,7 @@
 
 Projet support SLAM5.
 
-## Travail à faire
+## Travail effectuer
 
 1. Complétez l'implémentation du constructeur de la classe `LecteurDeDessin`.
 2. Complétez l'implémentation de la méthode `selectionnerEtJouerLesFormes` de la classe `LecteurDeDessin`.
@@ -13,4 +13,7 @@ Projet support SLAM5.
 7. Compléter l'implémentation de la méthode `pressDansZoneDessin` de la classe `OutilDeplacer`.
 8. Compléter l'implémentation des deux méthodes `ajouterAuDessin` et `supprimerDuDessin` de la classe `EditeurDeFormes`.
 9. Ajoutez tous les getters et setters nécessaires à la compilation et au bon fonctionnement de l'application.
+
+
+
 
