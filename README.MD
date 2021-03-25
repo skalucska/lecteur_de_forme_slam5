@@ -14,6 +14,7 @@ Projet support SLAM5.
 8. Compléter l'implémentation des deux méthodes `ajouterAuDessin` et `supprimerDuDessin` de la classe `EditeurDeFormes`.
 9. Ajoutez tous les getters et setters nécessaires à la compilation et au bon fonctionnement de l'application.
 
+Le programme compile et fonctionnne normalement
 
-
-
+10.Changement du nom(button) Forme rectangle
+11.Création de la classe OutilFormeOvale(non fonctionnelle)
